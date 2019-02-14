@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<script src="./scripts/d3.min.js"></script>
+	<script src="./scripts/jquery-3.3.1.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<title>Pokemon Battle Planner</title>
+	<link rel="icon" type="image/png" href="./resources/ball.png">
+
+</head>
+
+<body>
+
+	<div class="navigation">
+		<ul>
+			<li><img src="./icons/29.png" style="left:48px;">
+				<a id="overview_tab"  class="active" onclick="scrollToTab(4)">Overview</a></li>
+			<li><img src="./icons/25.png" style="left:48px;">
+				<a id="match_up_tab"onclick="scrollToTab(0)">Match Up</a></li>
+			<li><img src="./icons/1.png" style="left:44px;">
+				<a id="grab_rate_tab" onclick="scrollToTab(1)">Grab Rate</a></li>
+			<li><img src="./icons/39.png" style="left:42px;">
+				<a id="comparison_tab" onclick="scrollToTab(2)">Comparison</a></li>
+		</ul>
+	</div>
+
+	<img class="banner" src="./resources/banner2.jpg">
+
+	<div id='container-1' style="height: 100vh;">
+		<div id='treemap-chart'>
+			<div id='treemap-title1' style="color: white;font-size: 3em;text-align: center;">Pokemon Type and Generation Overview</div>
+			<div id='treemap-title2' style="color: white;font-size: 2em;text-align: center;">Click to start a battle within that tile</div>
+		</div>
+	</div>
+
+	<div id="container-2" class="container">
+		<div id="row-1">
+			<div id="picker-2" class="picker">
+				<input type="search" placeholder="You: Name, Type, or Generation" id='input1' onchange="inputChange(0);" onkeyup="this.onchange();" autocomplete='off' onpaste="this.onchange();" oninput="this.onchange();">
+				<button class='clear-button' type="button" onclick="clearfunc(0)">Clear</button>
+				<div class="gallery" id='gallery1'>
+					<div class="icon-wrapper">
+						<img class="icon" src="./resources/question.png" onclick="random_pick(0)">
+						<span>Random</span></div>
+				</div>
+			</div>
+			<div id="picker-2"class="picker">
+				<input type="search" placeholder="Opponent: Name, Type, or Generation" id='input2' onchange="inputChange(1);" onkeyup="this.onchange();" autocomplete='off' onpaste="this.onchange();" oninput="this.onchange();">
+				<button class='clear-button' type="button" onclick="clearfunc(1)">Clear</button>
+				<div class="gallery" id='gallery2'>
+					<div class="icon-wrapper">
+						<img class="icon" src="./resources/question.png" onclick="random_pick(1)">
+						<span>Random</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="row-2">
+			<div class="square" id="pick1square">
+				<div id='you'>YOU</div>
+				<img id="pick1" class="large-icon left" src="./icons/39.png"><br>
+				<span id="pick1name" class="bigName left">name</span><br>
+				<span id="pick1type" class="bigType left">type</span>
+				<div class="cancel left" onclick="cancelfunc(0);">&times</div>
+
+			</div>
+			<div class="square" id="chart">
+				<span style="color:white;font-style: italic;font-size: 28px;font-weight: bolder;">Combat Analysis</span>
+			</div>
+			<div class="square" id="pick2square">
+				<div id='opp'>OPPONENT</div>
+				<img id="pick2" class="large-icon right" src="./icons/39.png"><br>
+				<span id="pick2name" class="bigName right">name</span><br>
+				<span id="pick2type" class="bigType right">type</span>
+				<div class="cancel right" onclick="cancelfunc(1);">&times</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="container-3">
+		<div style="width: 100%;height: 15vh;text-align: center">
+			<div class="title3">Grab Rate</div>
+		</div>
+		<div class="box3" style="width: 75%;height: 75%;">
+			<div class="canvas" id="canvas1">
+			</div>
+			<div class="canvas" id="canvas2" style="position: absolute;right: 0;top:0;">
+			</div>
+		</div>
+	</div>
+
+	<div id="container-4">
+		<div id="container-4-box">
+			<select id='type_picker'>
+				<option>Grass</option>
+				<option>Fire</option>
+				<option>Water</option>
+				<option>Bug</option>
+				<option>Normal</option>
+				<option>Poison</option>
+				<option>Electric</option>
+				<option>Ground</option>
+				<option>Fairy</option>
+				<option>Fighting</option>
+				<option>Psychic</option>
+				<option>Rock</option>
+				<option>Ghost</option>
+				<option>Ice</option>
+				<option>Dragon</option>
+				<option>Dark</option>
+				<option>Steel</option>
+				<option>Flying</option>
+			</select>
+			<select id='value_picker'>
+				<option>Total</option>
+				<option>HP</option>
+				<option>Attack</option>
+				<option>Defense</option>
+				<option>Sp. Attack</option>
+				<option>Sp. Defense</option>
+				<option>Speed</option>
+
+			</select>
+		</div>
+	</div>
+	<script src="./scripts/script.js"></script>
+	<div style="position: relative;"><a style="position: absolute;bottom: 0px;right: 0px;text-align: right;color: white;" href='./references.html'>References</a></div>
+</body>
+
+</html>

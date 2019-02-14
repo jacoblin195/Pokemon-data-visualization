@@ -1,0 +1,59 @@
+.navigation {
+	position: sticky;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	top: 0px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+	overflow-x: hidden;
+}
+
+.navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #FF4516;
+}
+
+.navigation li {
+	padding: 0;
+	word-break: break-word;
+	text-align: center;
+	font-size: 18px;
+	;
+	float: left;
+	width: 230px;
+}
+
+.navigation li a {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bolder;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navigation li a:hover {
+	background-color: #3371B1;
+}
+
+.active {
+	background-color: #111;
+}
+
+.navigation li img {
+	width: 35px;
+	height: 35px;
+	float: left;
+	position: relative;
+	margin-right: 10px;
+	top: 5px;
+	pointer-events: none;
+}

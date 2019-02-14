@@ -1,0 +1,275 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-image: url("../resources/background.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banner {
+	width: 100%;
+	height: 45vh;
+}
+
+#container-2 {
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
+
+#row-1 {
+	width: 80%;
+	margin: 2vh auto;
+	display: flex;
+	height: auto;
+	margin-bottom: 0px;
+	justify-content: center;
+}
+
+.picker {
+	text-align: left;
+	padding: 1%;
+	width: 47%;
+	background: rgba(255, 255, 255, 0.5);
+	height: 32vh;
+	order: 1;
+	margin: 0px 2%;
+}
+
+input, .clear-button {
+	margin: 0px;
+}
+
+input {
+	line-height: 0;
+	width: 80%;
+	font-size: 1.5em;
+}
+
+.clear-button {
+	background: #3371B1;
+	border: none;
+	color: white;
+	font-family: "Courier New", Courier, monospace;
+	position: relative;
+	top: -.3em;
+	width: 18%;
+	height: 1.8em;
+	text-align: center;
+	padding-top: .25em;
+	padding-bottom: .25em;
+	font-size: 1em;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	height: 28vh;
+	overflow-y: auto;
+}
+
+.icon-wrapper {
+	order: 1;
+	width: 14%;
+	margin: 0;
+	padding: 1.5% 3%;
+	padding-bottom: 1vh;
+	text-align: center;
+}
+
+.icon-wrapper .icon {
+	width: 88%;
+	height: auto;
+	border: 4px solid;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.icon-wrapper span {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8vw;
+	font-weight: 600;
+	color: black;
+}
+
+#row-2 {
+	height: 33vw;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	margin: 2vh auto;
+	margin-bottom: 0px;
+	justify-content: center;
+}
+
+.square {
+	background: rgba(255, 255, 255, 0.5);
+	height: auto;
+	width: 23.3vw;
+	/* float: left; */
+	margin: 0 1vw;
+	text-align: center;
+}
+
+.large-icon {
+	width: 100%;
+	height: auto;
+}
+
+#pick1square {
+	border: .5vw solid red;
+}
+
+#pick2square {
+	border: .5vw solid blue;
+}
+
+#chart {
+	float: left;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .8);
+	width: 24vw;
+	height: 29vw;
+	position: relative;
+}
+
+.square .bigName {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5vh;
+	line-height: 3vh;
+	font-weight: bolder;
+	color: black;
+}
+
+.bigType {
+	font-size: 3vh;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	color: black;
+}
+
+#you {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3vw;
+	color: red;
+}
+
+#opp {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3vw;
+	color: blue;
+}
+
+#pick1, #pick2 {
+	width: 75%;
+	height: 75%;
+	margin: 0 auto;
+}
+
+.cancel {
+	font-size: 8vh;
+	line-height: 6vh;
+}
+
+.left, .right {
+	visibility: hidden;
+}
+
+#container-3 {
+	background: rgba(255, 255, 255, 0);
+	height: 100vh;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.box3 {
+	margin: auto;
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+}
+
+.canvas {
+	width: 42%;
+	height: 75vh;
+	background: rgba(180, 180, 180, 0.7);
+}
+
+.title3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 54px;
+	font-style: italic;
+	color: white;
+	position: relative;
+	top: 60%;
+	transform: translateY(-50%);
+}
+
+svg {
+	width: 100%;
+}
+
+#container-4 {
+	height: 100vh;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#container-4-box {
+	width: 80%;
+	height: 75%;
+	top: 50%;
+	position: relative;
+	margin: 0 auto;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.8);
+}
+
+#type_picker {
+	position: absolute;
+	top: 20px;
+	left: 60px;
+}
+
+#value_picker {
+	position: absolute;
+	top: 20px;
+	left: 150px;
+}
+
+.imgholder img {
+	width: 70px;
+	height: 70px;
+}
+
+.tooltip {
+	background: #eee;
+	box-shadow: 0 0 5px #999999;
+	color: #333;
+	font-size: 12px;
+	padding: 10px;
+	position: absolute;
+	text-align: left;
+	width: auto;
+	z-index: 10;
+	display: block;
+	opacity: 0;
+}
+
+#treemap-chart{
+	font-family: Arial, Helvetica, sans-serif;
+	width: 90%;
+	height: 90vh;
+	top: 50%;
+	transform: translateY(-50%);
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.8);
+	margin: 0 auto;
+}
